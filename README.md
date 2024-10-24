@@ -40,23 +40,24 @@ This is a 3-tier rule engine application developed using Python's Abstract Synta
 
 # Development of AST-Engine
 
--**To develop a rule engine application using Abstract Syntax Tree (AST) with Streamlit, we’ll break the task into the following steps:
+- To develop a rule engine application using Abstract Syntax Tree (AST) with Streamlit, we’ll break the task into the following steps:
 
--**Steps to Develop the Rule Engine:
--**Data Structure for AST: We’ll create a class Node that represents the AST. This node will have attributes like type (operator/operand), left child, right child, and value.
+- Steps to Develop the Rule Engine:
 
--**Database for Storing Rules: You can use SQLite, as it’s lightweight and fits the requirements of this application. The rules and their corresponding AST structure will be stored in this database.
+-- Data Structure for AST: We’ll create a class Node that represents the AST. This node will have attributes like type (operator/operand), left child, right child, and value.
+
+-- Database for Storing Rules: You can use SQLite, as it’s lightweight and fits the requirements of this application. The rules and their corresponding AST structure will be stored in this database.
 
 # API Design:
 
--create_rule(rule_string): Parse the rule string and convert it into an AST representation.
--combine_rules(rules): Combine multiple rules (ASTs) into one.
--evaluate_rule(json_data): Evaluate the rule against a provided dataset.
+- create_rule(rule_string): Parse the rule string and convert it into an AST representation.
+- combine_rules(rules): Combine multiple rules (ASTs) into one.
+- evaluate_rule(json_data): Evaluate the rule against a provided dataset.
 
 # Streamlit UI: 
 
--Create a simple UI to interact with the rule engine. The UI will allow users to:
--Define rules via a text input
--See the created rule's AST structure
--Combine multiple rules
--Evaluate the combined rule using test data
+- Create a simple UI to interact with the rule engine. The UI will allow users to:
+- Define rules via a text input
+- See the created rule's AST structure
+- Combine multiple rules
+- Evaluate the combined rule using test data
