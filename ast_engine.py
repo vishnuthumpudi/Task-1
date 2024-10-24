@@ -1,0 +1,33 @@
+class Node:
+    def __init__(self, node_type, value=None, left=None, right=None):
+        self.node_type = node_type  # 'operator' or 'operand'
+        self.value = value  # operand's value
+        self.left = left  
+        self.right = right 
+
+    def evaluate(self, data):
+        if self.node_type == "operand":
+            return self._evaluate_operand(data)
+        elif self.node_type == "operator":
+            return self._evaluate_operator(data)
+
+    def _evaluate_operand(self, data):
+        # Extract key and value from the operand (e.g., "age > 30")
+        key, operator, value = self.value.split(" ")
+        key_value = data.get(key)
+
+        # Apply comparison based on the operator
+        if operator == ">":
+            return key_value > int(value)
+        elif operator == "<":
+            return key_value < int(value)
+        elif operator == "=":
+            return key_value == value
+        return False
+
+    def _evaluate_operator(self, data):
+        if self.value == "AND":
+            return self.left.evaluate(data) and self.right.evaluate(data)
+        elif self.value == "OR":
+            return self.left.evaluate(data) or self.right.evaluate(data)
+        return False
