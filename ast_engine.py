@@ -52,3 +52,16 @@ def parse_rule_string(rule_string):
 
     return stack[0]  # Return root node of the AST
 
+def create_rule(rule_string):
+    # Creates AST from the rule string
+    return parse_rule_string(rule_string)
+
+def combine_rules(rules):
+    # Combines multiple ASTs into one
+    combined_ast = rules[0]
+    for rule in rules[1:]:
+        combined_ast = Node("operator", "AND", combined_ast, rule)
+    return combined_ast
+
+def evaluate_rule(rule_ast, data):
+    return rule_ast.evaluate(data)
