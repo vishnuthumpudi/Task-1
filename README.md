@@ -38,7 +38,7 @@ This is a 3-tier rule engine application developed using Python's Abstract Synta
 - Error handling for invalid rules
 - Rule modification options
 
-##Development of AST-Engine
+#Development of AST-Engine
 
 -To develop a rule engine application using Abstract Syntax Tree (AST) with Streamlit, we’ll break the task into the following steps:
 
@@ -47,12 +47,13 @@ This is a 3-tier rule engine application developed using Python's Abstract Synta
 
 -Database for Storing Rules: You can use SQLite, as it’s lightweight and fits the requirements of this application. The rules and their corresponding AST structure will be stored in this database.
 
-##API Design:
+#API Design:
 
 -create_rule(rule_string): Parse the rule string and convert it into an AST representation.
 -combine_rules(rules): Combine multiple rules (ASTs) into one.
 -evaluate_rule(json_data): Evaluate the rule against a provided dataset.
-##Streamlit UI: 
+
+#Streamlit UI: 
 
 -Create a simple UI to interact with the rule engine. The UI will allow users to:
 -Define rules via a text input
